@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+    <title>Organizador de Tarefas</title>
+</head>
+<body>
+    <main>
+    
+        <div class="container">
+            <div id="formPrincipal">
+                <h1>Organizador de Tarefas</h1>
+                <!-- Formulário para adicionar tarefas -->
+                <form id="taskForm">
+                    <label for="taskInput">Nova Tarefa:</label>
+                    <input type="text" id="taskInput" required placeholder="Digite aqui sua tarefa.">
+                    <button type="submit">Adicionar Tarefa</button>
+                </form>
+            </div>
+    
+            <!-- Lista de tarefas pendentes -->
+            <div id="pendingTasks">
+                <h2>Tarefas Pendentes</h2>
+                <ul id="pendingList"></ul>
+            </div>
+    
+            <!-- Lista de tarefas concluídas -->
+            <div id="completedTasks">
+                <h2>Tarefas Concluídas</h2>
+                <ul id="completedList"></ul>
+            </div>
+        </div>
+    </main>
+
+    <script src="src/script.js"></script>
+</body>
+</html>
