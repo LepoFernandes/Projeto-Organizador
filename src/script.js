@@ -1,40 +1,38 @@
-document.addEventListener('DOMContentLoaded', function (){
+document.addEventListener('DOMContentLoaded', function () {
     const taskForm = document.getElementById('taskForm');
     const taskInput = document.getElementById('taskInput');
     const pendingList = document.getElementById('pendingList');
     const completedList = document.getElementById('completedList');
 
-    
     taskForm.addEventListener('submit', function (event) {
-        event.preventDefault(); // Evita o comportamento padrão do formulário
+        event.preventDefault();
 
         const taskText = taskInput.value.trim();
         if (taskText !== '') {
             addTask(taskText);
-            taskInput.value = ''; // Limpa o campo de entrada
+            taskInput.value = '';
         }
     });
 
     function addTask(taskText) {
-        // Cria um novo item de lista
         const listItem = document.createElement('li');
         listItem.innerHTML = `
             <span>${taskText}</span>
+            <button class="complete-btn">Concluir</button>
             <button class="remove-btn">Remover</button>
         `;
 
-        //Marcar a tarefa como concluída
-        listItem.addEventListener('click', function () {
+        const completeBtn = listItem.querySelector('.complete-btn');
+        const removeBtn = listItem.querySelector('.remove-btn');
+
+        completeBtn.addEventListener('click', function () {
             toggleTaskStatus(listItem);
         });
 
-        // Remover a tarefa
-        const removeBtn = listItem.querySelector('.remove-btn');
         removeBtn.addEventListener('click', function () {
             removeTask(listItem);
         });
 
-        // Adiciona na lista de tarefas pendentes
         pendingList.appendChild(listItem);
     }
 
@@ -48,6 +46,3 @@ document.addEventListener('DOMContentLoaded', function (){
         taskItem.remove();
     }
 });
-
-
-
