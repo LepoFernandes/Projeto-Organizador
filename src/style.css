@@ -90,12 +90,13 @@ button:hover {
 }
 
 li:hover {
-    background-color: #8888889c;
+    background-color: #274046;
+    color: white;
 }
 
 .completed {
     text-decoration: line-through;
-    color: #888;
+    color: #274046;
 }
 
 @media screen and (max-width: 600px) {
