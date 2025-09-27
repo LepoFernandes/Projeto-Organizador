@@ -1,7 +1,5 @@
 # 📝 Projeto Organizador de Tarefas
 
-![Preview do Projeto](src/img/mockup/imagem_6_6.png) <!-- opcional: coloca print da tela -->
-
 ## 🚀 Sobre o projeto
 
 Esse foi um dos meus primeiros projetos, feito para praticar **HTML, CSS e JavaScript**.
